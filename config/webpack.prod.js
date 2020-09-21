@@ -87,7 +87,7 @@ module.exports = {
       chunkFilename: "[name].[chunkhash:8].chunk.css",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./public/index.html",
       filename: "index.html",
     }),
     new CompressionPlugin({
