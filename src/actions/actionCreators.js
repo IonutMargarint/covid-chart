@@ -22,7 +22,7 @@ const loadSecondaryChart = (secondaryChartState) => {
   return (dispatch) => {
     dispatch({
       type: actionTypes.LOAD_SECONDARY_CHART,
-      isLoaded: secondaryChartState,
+      isSecondChartLoaded: secondaryChartState,
     });
   };
 };

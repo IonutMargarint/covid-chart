@@ -1,11 +1,11 @@
 import createReducer from "../main/store/createReducer";
 
 const initialState = {
-  isLoaded: false,
+  isSecondChartLoaded: false,
 };
 
-function LOAD_SECONDARY_CHART(nextState, { isLoaded }) {
-  nextState.isLoaded = isLoaded;
+function LOAD_SECONDARY_CHART(nextState, { isSecondChartLoaded }) {
+  nextState.isSecondChartLoaded = isSecondChartLoaded;
 }
 
 export default createReducer(initialState, {

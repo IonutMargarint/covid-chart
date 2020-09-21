@@ -1,5 +1,5 @@
 import React from "react";
-import { FormControl, NativeSelect } from "@material-ui/core";
+import { FormControl, NativeSelect, Grid } from "@material-ui/core";
 
 import styles from "./IntervalSelect.scss";
 
@@ -14,18 +14,26 @@ const IntervalSelect = ({ handleIntervalChange }) => {
   };
 
   return (
-    <FormControl className={styles.formControl}>
-      <NativeSelect
-        defaultValue=""
-        onChange={(e) => handleIntervalChange(e.target.value)}
-      >
-        {sections.items.map((section, key) => (
-          <option key={key} value={section.label}>
-            {section.label}
-          </option>
-        ))}
-      </NativeSelect>
-    </FormControl>
+    <Grid
+      container
+      direction="column"
+      alignItems="center"
+      justify="center"
+      style={{ minHeight: "10vh" }}
+    >
+      <FormControl className={styles.formControl}>
+        <NativeSelect
+          defaultValue=""
+          onChange={(e) => handleIntervalChange(e.target.value)}
+        >
+          {sections.items.map((section, key) => (
+            <option key={key} value={section.label}>
+              {section.label}
+            </option>
+          ))}
+        </NativeSelect>
+      </FormControl>
+    </Grid>
   );
 };
 

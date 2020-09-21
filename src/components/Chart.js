@@ -11,7 +11,7 @@ import styles from "./Chart.scss";
 const Chart = ({
   data: { confirmed, deaths },
   interval,
-  isLoaded,
+  isSecondChartLoaded,
   onLoadSecondaryChart,
 }) => {
   const [dailyData, setDailyData] = useState([]);
@@ -162,7 +162,7 @@ const Chart = ({
       />
     ) : null;
 
-  const drillDownChart = isLoaded ? (
+  const drillDownChart = isSecondChartLoaded ? (
     <Line
       data={{
         labels: statesData.map(({ provinceState }) => provinceState),
@@ -190,8 +190,8 @@ const Chart = ({
       {dailyLineChart}
       {monthlyLineChart}
       <div className={styles.countryCharts}>
-        {usaBarChart}
-        {drillDownChart}
+        <div>{usaBarChart}</div>
+        <div>{drillDownChart}</div>
       </div>
     </div>
   );
@@ -200,8 +200,7 @@ const Chart = ({
 export default connect(
   (state) => ({
     data: state.chartMain.data,
-    dailyData: state.chartMain.dailyData,
-    isLoaded: state.chartSecondary.isLoaded,
+    isSecondChartLoaded: state.chartSecondary.isSecondChartLoaded,
   }),
   (dispatch) => ({
     onLoadSecondaryChart: (secondaryChartState) =>

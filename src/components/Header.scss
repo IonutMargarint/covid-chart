@@ -1,4 +1,10 @@
 .header {
-  color: "#001529";
-  text-align: "center";
+  background-color: #282c34;
+  min-height: 10vh;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
 }

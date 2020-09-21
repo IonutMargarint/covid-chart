@@ -1,0 +1,29 @@
+.footerWraper {
+  padding: 4rem 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  div {
+    p:first-child {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    p {
+      font-size: 0.9rem;
+      a {
+        color: #0060b6;
+
+        &:hover {
+          color: #00a0c6;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

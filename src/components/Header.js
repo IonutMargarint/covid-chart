@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <nav className={styles.header}>
       <header>
-        <h2>Corona Virus Statistics</h2>
+        <h2>COVID-19 Tracker</h2>
       </header>
     </nav>
   );

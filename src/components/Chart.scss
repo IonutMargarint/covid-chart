@@ -1,9 +1,14 @@
 .container {
   margin: 0 auto;
   width: 70%;
+  padding: 32px;
 }
 
 .countryCharts {
   display: flex;
   flex-direction: column;
+
+  & div:first-child {
+    margin-bottom: 64px;
+  }
 }
