@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "useBuiltIns": "usage",
+        "debug": true,
+        "corejs": 3
+      }
+    ],
+    "@babel/preset-react"
+  ],
+
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    "add-module-exports",
+    "css-modules-transform",
+    "transform-postcss"
+  ]
+}
